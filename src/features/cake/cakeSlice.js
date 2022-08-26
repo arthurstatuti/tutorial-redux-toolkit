@@ -24,7 +24,7 @@ const cakeSlice = createSlice({
 
 // exportando cake reducers (vão pra app/store.js)
 // module.exports = cakeSlice.reducer;
-export default cakeSlice.reducer;
+export const { cakeReducer } = cakeSlice.reducer;
 // exportando cake actions (vão pro index.js)
 // module.exports.cakeActions = cakeSlice.actions;
 export const { ordered, restocked } = cakeSlice.actions;

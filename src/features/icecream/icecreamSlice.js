@@ -37,6 +37,6 @@ const icecreamSlice = createSlice({
 // estraReducers allow createSlice() to respond to other action types besides the types it has generated 
 
 // module.exports = icecreamSlice.reducer;
-export default icecreamSlice.reducer;
+export const { icecreamReducer } = icecreamSlice.reducer;
 // module.exports.icecreamActions = icecreamSlice.actions;
 export const { ordered, restocked }  = icecreamSlice.actions;
