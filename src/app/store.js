@@ -11,9 +11,9 @@
 // const reduxLogger = require('redux-logger');
 
 import { configureStore } from '@reduxjs/toolkit';
-import { cakeReducer } from '../features/cake/cakeSlice';
-import { icecreamReducer } from '../features/icecream/icecreamSlice';
-import { userReducer } from '../features/user/userSlice';
+import cakeReducer from '../features/cake/cakeSlice';
+import icecreamReducer from '../features/icecream/icecreamSlice';
+import userReducer from '../features/user/userSlice';
 
 const store = configureStore({
 

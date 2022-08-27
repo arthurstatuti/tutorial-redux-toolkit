@@ -22,9 +22,5 @@ const cakeSlice = createSlice({
 
 // createSlice() will automatically generate action creators (+ actions) with the same names of the reducer functions we have written. We don't have to type them by hand.   
 
-// exportando cake reducers (vão pra app/store.js)
-// module.exports = cakeSlice.reducer;
-export const { cakeReducer } = cakeSlice.reducer;
-// exportando cake actions (vão pro index.js)
-// module.exports.cakeActions = cakeSlice.actions;
 export const { ordered, restocked } = cakeSlice.actions;
+export default cakeSlice.reducer;
