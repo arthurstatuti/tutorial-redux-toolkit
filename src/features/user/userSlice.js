@@ -6,10 +6,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 
 // createAsyncThunk generates pending, fulfilled, and rejected action types para o fetchUsers
-export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
-  return fetch('https://jsonplaceholder.typicode.com/users')
-  .then((response) => response.json());
-});
+export const fetchUsers = createAsyncThunk(
+  'user/fetchUsers',
+  async () => {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+    const data = response.json()
+    return data;
+  });
 
 
 
@@ -20,7 +23,7 @@ const userSlice = createSlice({
 
   initialState: {
     loading: false,
-    users: [],
+    users: false,
     error: ''
   },
 
